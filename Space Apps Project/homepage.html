@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage - Chronicle of Exoplanet Exploration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+      /* Starry Background */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #homepage {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: black;
+      }
+      #stars, #stars2, #stars3, #stars4 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: 
+          1024px 1748px #FFF, 644px 1991px #FFF, 1658px 983px #FFF, 1277px 1565px #FFF, 1676px 640px #FFF, 1423px 1843px #FFF,
+          1719px 1946px #FFF, 1365px 1354px #FFF, 1275px 487px #FFF, 889px 1792px #FFF, 424px 533px #FFF, 1024px 1212px #FFF,
+          1923px 1754px #FFF, 1200px 1933px #FFF, 1333px 1438px #FFF, 1110px 1449px #FFF, 876px 1554px #FFF, 1600px 1387px #FFF;
+        animation: animStars 50s linear infinite;
+      }
+      #stars2 {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: 
+          1135px 1372px #FFF, 1132px 1603px #FFF, 1579px 983px #FFF, 977px 1523px #FFF, 1506px 1040px #FFF, 1139px 493px #FFF,
+          1365px 1675px #FFF, 1867px 849px #FFF, 672px 699px #FFF, 1394px 491px #FFF, 1624px 1073px #FFF, 882px 1387px #FFF,
+          1620px 1753px #FFF, 1450px 1203px #FFF, 1337px 1903px #FFF, 1092px 1935px #FFF, 1355px 1600px #FFF, 1487px 1349px #FFF;
+        animation: animStars 100s linear infinite;
+      }
+      #stars3 {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: 
+          1574px 1299px #FFF, 938px 1966px #FFF, 1835px 1844px #FFF, 767px 183px #FFF, 1347px 1762px #FFF, 1806px 937px #FFF,
+          1788px 648px #FFF, 935px 1454px #FFF, 1129px 948px #FFF, 1691px 1395px #FFF, 1402px 1247px #FFF, 1552px 1719px #FFF,
+          1045px 1893px #FFF, 1215px 1654px #FFF, 1343px 1456px #FFF, 1005px 1540px #FFF, 1784px 1234px #FFF, 1284px 1093px #FFF;
+        animation: animStars 150s linear infinite;
+      }
+      #stars4 {
+        position: absolute;
+        width: 0.5px;
+        height: 0.5px;
+        background: transparent;
+        box-shadow: 
+          1200px 1400px #FFF, 1350px 1500px #FFF, 1450px 700px #FFF, 900px 1800px #FFF, 1600px 1600px #FFF, 1300px 1000px #FFF,
+          1500px 1200px #FFF, 1900px 1100px #FFF, 800px 1500px #FFF, 1700px 1300px #FFF, 1100px 1700px #FFF, 950px 1400px #FFF;
+        animation: animStars 75s linear infinite;
+      }
+      @keyframes animStars {
+        from {transform: translateY(0px);}
+        to {transform: translateY(-2000px);}
+      }
+
+      /* Nebula Background */
+      #nebula {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/images/nebula.png');
+        background-size: cover;
+        opacity: 0.3;
+      }
+
+      /* Explore Section */
+      .explore-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- START HOMEPAGE SECTION -->
+    <section id="homepage">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div id="stars4"></div>
+      <div id="nebula"></div>
+      <div class="explore-container">
+          <h1>Welcome to the Chronicle of Exoplanet Exploration</h1>
+          <p>Embark on a journey to discover our solar system planets with Team Earendel</p>
+          <a href="index.html" class="btn btn-primary btn-lg mt-4">Explore</a>
+      </div>
+    </section>
+    <!-- END HOMEPAGE SECTION -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

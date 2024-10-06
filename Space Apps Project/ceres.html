@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ceres - Dwarf Planet Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .planet-hero {
+            background-image: url('assets/images/ceres.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .planet-hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .planet-content {
+            padding: 40px;
+        }
+        .collapsible {
+            background-color: #6a5acd;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .collapsible:after {
+            content: '\002B';
+            font-size: 1.2em;
+            float: right;
+        }
+        .collapsible.active:after {
+            content: "\2212";
+        }
+        .content {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .content p {
+            padding: 15px;
+        }
+        .back-to-planets {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn-back {
+            background-color: #6a5acd;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-back:hover {
+            background-color: #5340aa;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="planet-hero">
+        <h1>Ceres</h1>
+    </div>
+
+    <div class="container planet-content">
+        <div class="planet-info">
+            <h2 class="section-title">About Ceres</h2>
+            <p>Ceres is the largest object in the asteroid belt between Mars and Jupiter. It is the only dwarf planet located in the inner solar system and is believed to have water beneath its surface.</p>
+        </div>
+
+        <button class="collapsible">Surface & Composition</button>
+        <div class="content">
+            <p>Ceres's surface is composed of a mixture of water ice and various minerals, including hydrated minerals such as carbonates and clay. It also has bright spots that are believed to be salt deposits.</p>
+        </div>
+
+        <button class="collapsible">Water Ice</button>
+        <div class="content">
+            <p>Scientists believe that Ceres has a significant amount of water ice beneath its crust. This makes it a candidate for potential habitability, at least for microbial life.</p>
+        </div>
+
+        <button class="collapsible">Discovery</button>
+        <div class="content">
+            <p>Ceres was discovered in 1801 by Giuseppe Piazzi and was initially classified as a planet. It was reclassified as an asteroid and then as a dwarf planet in 2006.</p>
+        </div>
+
+        <div class="back-to-planets">
+            <a href="index.html" class="btn-back">← Back to All Planets</a>
+        </div>
+    </div>
+
+    <script>
+        const collapsibles = document.getElementsByClassName('collapsible');
+        for (let i = 0; i < collapsibles.length; i++) {
+            collapsibles[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+                let content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

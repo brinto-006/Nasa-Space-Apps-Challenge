@@ -1,0 +1,118 @@
+@media only screen and (max-width : 767px) {
+    .navbar {
+        background-color: #000;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .navbar-light .navbar-toggler {
+        background: #fff;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .hero-slider.owl-carousel .owl-nav button.owl-prev {
+        left: 15px;
+        top: auto;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        bottom: 0;
+    }
+    .hero-slider.owl-carousel .owl-nav button.owl-next {
+        right: 15px;
+        top: auto;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        bottom: 0;
+    }
+    .hero-slider .slider-item h1 {
+        font-size: 30px;
+    }
+    .hero-slider .slider-item p {
+        font-size: 18px;
+    }
+    .hero-slider .slider-item .slider-btn {
+        padding: 15px 25px;
+        font-size: 13px;
+    }
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pb-70 {
+        padding-bottom: 20px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .section-title h2 {
+        font-size: 25px;
+    }
+    .section-title {
+        margin: 0 auto 30px;
+    }
+    .profile-img {
+        margin-bottom: 15px;
+    }
+    .default-btn {
+        padding: 15px 30px;
+        font-size: 13px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer ul {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+    .profile-img {
+        text-align: center;
+    }
+    .hero-content h1{
+       font-size:20px ;
+
+    .intro-text {
+        text-align: center;
+    }
+}
+/* small mobile :320px. */
+@media (max-width: 767px){
+    .hero-content h1{
+        font-size: 17px;
+        line-height: 27px;
+    }
+    .hero-content h5{
+        
+        visibility: hidden;
+    }
+}
+    
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+ 
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+ 
+}
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    /* Hero CSS  */
+    .hero-content h1{
+        font-size:10px;
+        line-height:5px;
+    }
+    .hero-content h5{
+        font-size: 10px;
+
+    }
+    .hero-content p{
+        font-size: 5px;
+    }
+}

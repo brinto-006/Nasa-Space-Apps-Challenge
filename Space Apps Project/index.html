@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>teamearendel</title>
+    <link rel="stylesheet" href="assets/css/icofont.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for enhanced visualization */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .planet-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .planet-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .planet-header {
+            font-weight: 700;
+            margin-top: 15px;
+            color: #007bff;
+        }
+
+        .planet-description {
+            margin-top: 10px;
+        }
+
+        .navbar {
+            background-color: #000;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        /* Floating Search Bar */
+        #floating-search-bar {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        #search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #close-search {
+            background: #dc3545;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <!----------START HEADER STYLE------------>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">PLANET</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#cards">EXPLORE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inner-planet">INNER PLANETS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#outer-planet">OUTER PLANETS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dwarf-planet">DWARF PLANETS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="toggleSearchBar()">SEARCH</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!----------FLOATING SEARCH BAR------------>
+    <div id="floating-search-bar">
+        <input type="text" id="search-bar" placeholder="Search for a planet or dwarf planet..." onkeyup="searchPlanets()">
+        <button id="close-search" onclick="toggleSearchBar()">Close Search</button>
+    </div>
+
+    <!------------------END HEADER STYLE---------------->
+    <!-----------------START HERO SECTION------------------>
+    <section id="hero" class="d-flex align-items-center" style="background-image: url(./assets/images/galaxy-hero.jpg); background-size: cover; background-repeat: no-repeat; height: 100vh;">
+        <div class="container text-center text-white">
+            <h1>Explore Our Solar System</h1>
+            <p>The solar system has eight planets and five officially recognized dwarf planets. Dive into each planet's unique characteristics and explore what makes our solar system so fascinating.</p>
+        </div>
+    </section>
+    <!-----------------END HERO SECTION------------------>
+
+    <!---------start planet section--------->
+    <section id="planet-area" class="pt-5">
+        <div class="container">
+            <div class="row" id="inner-planet">
+                <h1 class="text-center">Inner Planets</h1>
+                <p class="text-center">The first four planets from the Sun are Mercury, Venus, Earth, and Mars. These inner planets also are known as terrestrial planets because they have solid surfaces.</p>
+                
+                <!-- Mercury -->
+                <div class="col-lg-3 planet-item" data-planet-name="mercury">
+                    <img src="assets/images/Mercury Facts.jpg" alt="Mercury">
+                    <h3 class="planet-header">Mercury</h3>
+                    <p class="planet-description">Mercury is the smallest planet in our solar system, and the nearest to the Sun.</p>
+                    <a href="mercury.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Venus -->
+                <div class="col-lg-3 planet-item" data-planet-name="venus">
+                    <img src="assets/images/2.png" alt="Venus">
+                    <h3 class="planet-header">Venus</h3>
+                    <p class="planet-description">Venus is the second planet from the Sun, and Earth's closest planetary neighbor.</p>
+                    <a href="venus.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Earth -->
+                <div class="col-lg-3 planet-item" data-planet-name="earth">
+                    <img src="assets/images/3.png" alt="Earth">
+                    <h3 class="planet-header">Earth</h3>
+                    <p class="planet-description">Earth – our home planet – is the third planet from the Sun.</p>
+                    <a href="earth.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Mars -->
+                <div class="col-lg-3 planet-item" data-planet-name="mars">
+                    <img src="assets/images/4.png" alt="Mars">
+                    <h3 class="planet-header">Mars</h3>
+                    <p class="planet-description">Mars – the fourth planet from the Sun – is a dusty, cold, desert world with a very thin atmosphere.</p>
+                    <a href="mars.html" class="btn btn-info mt-3">Details</a>
+                </div>
+            </div>
+            
+            <div class="row" id="outer-planet">
+                <h1 class="text-center">Outer Planets</h1>
+                <p class="text-center">The giant planets in our outer solar system don't have hard surfaces and instead have swirling gases above a core. Jupiter and Saturn are gas giants. Uranus and Neptune are ice giants.</p>
+                
+                <!-- Jupiter -->
+                <div class="col-lg-3 planet-item" data-planet-name="jupiter">
+                    <img src="assets/images/5.png" alt="Jupiter">
+                    <h3 class="planet-header">Jupiter</h3>
+                    <p class="planet-description">Jupiter is the largest planet in our solar system.</p>
+                    <a href="jupiter.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Saturn -->
+                <div class="col-lg-3 planet-item" data-planet-name="saturn">
+                    <img src="assets/images/6.png" alt="Saturn">
+                    <h3 class="planet-header">Saturn</h3>
+                    <p class="planet-description">Saturn is the sixth planet from the Sun, the second-largest planet in our solar system.</p>
+                    <a href="saturn.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Uranus -->
+                <div class="col-lg-3 planet-item" data-planet-name="uranus">
+                    <img src="assets/images/7.png" alt="Uranus">
+                    <h3 class="planet-header">Uranus</h3>
+                    <p class="planet-description">The seventh planet from the Sun, Uranus has the third largest diameter of planets in our solar system.</p>
+                    <a href="uranus.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Neptune -->
+                <div class="col-lg-3 planet-item" data-planet-name="neptune">
+                    <img src="assets/images/8.png" alt="Neptune">
+                    <h3 class="planet-header">Neptune</h3>
+                    <p class="planet-description">Neptune is the eighth and most distant planet in our solar system.</p>
+                    <a href="neptune.html" class="btn btn-info mt-3">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planet-area">
+        <div class="container">
+            <div class="row" id="dwarf-planet">
+                <h1 class="text-center">Dwarf Planets</h1>
+                <p class="text-center">Beyond Neptune, a newer class of smaller worlds called dwarf planets reign, including longtime favorite Pluto. The other dwarf planets are Ceres, Makemake, Haumea, and Eris. Ceres is the only dwarf planet in the inner solar system. It's located in the main asteroid belt between Mars and Jupiter.</p>
+                
+                <!-- Ceres -->
+                <div class="col-lg-4 planet-item" data-planet-name="ceres">
+                    <img src="assets/images/9.png" alt="Ceres">
+                    <h3 class="planet-header">Ceres</h3>
+                    <p class="planet-description">Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter.</p>
+                    <a href="ceres.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Pluto -->
+                <div class="col-lg-4 planet-item" data-planet-name="pluto">
+                    <img src="assets/images/10.png" alt="Pluto">
+                    <h3 class="planet-header">Pluto</h3>
+                    <p class="planet-description">Pluto was long considered our solar system's ninth planet.</p>
+                    <a href="pluto.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Haumea -->
+                <div class="col-lg-4 planet-item" data-planet-name="haumea">
+                    <img src="assets/images/11.png" alt="Haumea">
+                    <h3 class="planet-header">Haumea</h3>
+                    <p class="planet-description">Haumea is oval-shaped, and is one of the fastest rotating large objects in our solar system.</p>
+                    <a href="haumea.html" class="btn btn-info mt-3">Details</a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Makemake -->
+                <div class="col-lg-4 planet-item" data-planet-name="makemake">
+                    <img src="assets/images/12.png" alt="Makemake">
+                    <h3 class="planet-header">Makemake</h3>
+                    <p class="planet-description">Makemake is slightly smaller than Pluto, and is the second-brightest object in the Kuiper Belt.</p>
+                    <a href="makemake.html" class="btn btn-info mt-3">Details</a>
+                </div>
+                
+                <!-- Eris -->
+                <div class="col-lg-4 planet-item" data-planet-name="eris">
+                    <img src="assets/images/13.png" alt="Eris">
+                    <h3 class="planet-header">Eris</h3>
+                    <p class="planet-description">The discovery of Eris helped trigger a debate in the scientific community about the definition of a planet.</p>
+                    <a href="eris.html" class="btn btn-info mt-3">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------START ABOUT SECTION------------------>
+    <section>
+        <div class="card">
+            <div class="card-section">
+                <div class="container" id="cards">
+                    <p>Keep Exploring</p>
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------START PORTFOLIO SECTION----------------->
+
+    <section class="portfolio">
+        <div class="container" id="port">
+            <div class="button-group filter-button-group">
+                <button data-filter="*">all</button>
+                <button data-filter=".resources">resources</button>
+                <button data-filter=".equipment">equipment</button>
+                <button data-filter=".Discover">Discover</button>
+            </div>
+            <div class="grid">
+                <div class="grid-item web"><img src="assets/images/portfolio/img-1.jpg" alt=""></div>
+                <div class="grid-item resources equipment"><img src="assets/images/portfolio/img-2.jpg" alt=""></div>
+                <div class="grid-item marketings equipment"><img src="assets/images/portfolio/img-3.jpg" alt=""></div>
+                <div class="grid-item web marketings"><img src="assets/images/portfolio/img-4.jpg" alt=""></div>
+                <div class="grid-item Discover"><img src="assets/images/portfolio/img-5.jpg" alt=""></div>
+                <div class="grid-item Discover Discover"><img src="assets/images/portfolio/img-6.jpg" alt=""></div>
+                <div class="grid-item resources equipment"><img src="assets/images/portfolio/img-7.jpg" alt=""></div>
+                <div class="grid-item resources equipment"><img src="assets/images/portfolio/img-8.jpg" alt=""></div>
+                <div class="grid-item Discover equipment"><img src="assets/images/portfolio/img-9.jpg" alt=""></div>
+                <div class="grid-item marketings equipment"><img src="assets/images/portfolio/img-10.jpg" alt=""></div>
+                <div class="grid-item resources equipment"><img src="assets/images/portfolio/img-11.jpg" alt=""></div>
+            </div>
+        </div>
+    <section>
+    <!----------------END PORTFOLIO SECTION----------------->
+
+    <!-- Footer area Start  -->
+    <footer>
+        <section id="footer" class="footer_sec">
+            <div class="footer_area">
+                <div class="container-fluid">
+                    <div class="footer__content">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer_widget">
+                                    <div class="footer_widget_title">
+                                        <div class="f_logo">
+                                            <h3>PLANET</h3>
+                                        </div>
+                                    </div>
+                                    <div class="footer_widget_content">
+                                        <div class="footer_logo_area">
+                                            <p>TEAM EARENDEL</p>
+                                            <div class="social">
+                                                <h4 class="flw_ml">Follow us</h4>
+                                                <ul>
+                                                   <h3>Planet Service</h3>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 visibility_none">
+                                <div class="footer_widget">
+                                    <div class="footer_widget_title mr-10">
+                                        <h2>Services</h2>
+                                    </div>
+                                    <div class="footer_widget_content">
+                                        <div class="footer_services">
+                                            <ul>
+                                                <li><a href="#">- Home</a></li>
+                                                <li><a href="#">- News & Event</a></li>
+                                                <li><a href="#">- The Universe</a></li>
+                                                <li><a href="#">- Multimedia</a></li>
+                                                <li><a href="#">- Space</a></li>
+                                                <li><a href="#">- Mission</a></li>
+                                                <li><a href="#">- Science</a></li>
+                                                <li><a href="#">- learning & resources/</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer_widget ml_30">
+                                    <div class="footer_widget_title mr-10">
+                                        <h2>Contact Info</h2>
+                                    </div>
+                                    <div class="footer_widget_content">
+                                        <ul>
+                                            <li>
+                                                <div class="footer_contact_address">
+                                                    <span>House no 35, Sylhet, Bangladesh</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="footer_contact_item">
+                                                    <h6>Email:</h6>
+                                                    <p><a href="#">teamearendel.com</a></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="footer_contact_item">
+                                                    <h6>Support:</h6>
+                                                    <p>+1 325 562 3265</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="footer_contact_item">
+                                                    <h6>Website:</h6>
+                                                    <p>www.teamearendel.com</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer_widget">
+                                    <div class="footer_widget_title">
+                                        <h2>Stay in Touch</h2>
+                                    </div>
+                                    <div class="footer_widget_content">
+                                        <div class="footer_submit">
+                                            <p>Fruitful and herb the seasons of fish saying likeness face beast cattle.</p>
+                                            <div class="footer_submit_form">
+                                                <form action="/">
+                                                    <input type="email" class="form-control" placeholder="Email Address">
+                                                    <button class="s-btn" type="submit"><i class="fab fa-telegram"></i> subscribe now</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__copyright">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="footer__copyright_text">
+                                    <p>Copyright © 2024 <a href="#">teamearendel</a>. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="footer__policy text-end">
+                                    <a href="#">Terms & Condition</a>
+                                    <a href="#"> Privacy</a>
+                                    <a href="#">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Footer area End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/isotope-docs.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Function to toggle the floating search bar
+        function toggleSearchBar() {
+            let searchBar = document.getElementById('floating-search-bar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+
+        // Function to filter planets based on search input
+        function searchPlanets() {
+            let input = document.getElementById('search-bar').value.toLowerCase();
+            let planetItems = document.getElementsByClassName('planet-item');
+
+            for (let i = 0; i < planetItems.length; i++) {
+                let planetName = planetItems[i].getAttribute('data-planet-name');
+                if (planetName.includes(input)) {
+                    planetItems[i].style.display = "";
+                } else {
+                    planetItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+  </body>
+</html>
